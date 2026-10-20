@@ -1,15 +1,15 @@
 # Studyflow
 
-Studyflow is a student planner built with React, Vite, Flask, and SQLite. The Flask server hosts the compiled React app and provides a JSON API for tasks, goals, and a small overview.
+Aplicație pentru planificarea studiului, realizată cu React, Vite, Flask și SQLite. Flask servește interfața React compilată și oferă un API JSON pentru sarcini, obiective și date de sinteză.
 
-## Requirements
+## Cerințe
 
-- Python 3.10+
-- Node.js 20+
+- Python 3.10 sau mai nou
+- Node.js 20.19+ sau 22.12+
 
-## Run locally on Windows PowerShell
+## Pornire locală în PowerShell
 
-Install frontend packages and build the React app:
+Instalează pachetele React și compilează interfața:
 
 ```powershell
 cd app/frontend
@@ -18,17 +18,17 @@ npm.cmd run build
 cd ../..
 ```
 
-Install Flask and start the local server:
+Instalează Flask și pornește serverul:
 
 ```powershell
 python -m pip install -r app/requirements.txt
 python app/main.py
 ```
 
-Open http://127.0.0.1:5000. Flask creates a local SQLite database at `app/studyflow.sqlite3` and seeds sample tasks and goals on first run. Data stays on this computer.
+Deschide http://127.0.0.1:5000. La prima pornire, Flask creează baza SQLite `app/studyflow.sqlite3` și adaugă câteva sarcini și obiective demonstrative. Datele rămân pe acest calculator.
 
-## React development mode
+## Mod de dezvoltare React
 
-Run `npm.cmd run dev` from `app/frontend` to use Vite's development server while editing the React UI. The built local app is served by Flask at port 5000.
+Pornește Flask într-un terminal cu `python app/main.py`. În alt terminal rulează `cd app/frontend` apoi `npm.cmd run dev`. Vite redirecționează apelurile `/api` către Flask.
 
-Schedule entries and focus metrics are sample data for this first version. Tasks and goals are stored in SQLite and can be added, completed, updated, and deleted from the app.
+Programul și datele despre concentrare sunt demonstrative în această primă versiune. Sarcinile și obiectivele se salvează în SQLite și pot fi adăugate, completate, actualizate și șterse din aplicație.
