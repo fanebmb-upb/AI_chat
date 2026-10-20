@@ -1,8 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import {
-  ArrowDownRight, ArrowRight, ArrowUpRight, Bell, BookOpen, CalendarDays,
-  Check, ChevronDown, CircleHelp, Clock3, Command, Crosshair, Focus, Goal,
-  LayoutDashboard, ListTodo, Menu, MoreHorizontal, Plus, Search, Settings2,
+  ArrowRight, ArrowUpRight, Bell, BookOpen, CalendarDays,
+  Check, ChevronDown, Focus, Goal, LayoutDashboard, ListTodo, Menu, MoreHorizontal, Plus, Search,
   Sparkles, Target, TrendingUp, X,
 } from 'lucide-react';
 
