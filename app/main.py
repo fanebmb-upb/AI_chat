@@ -192,4 +192,4 @@ if __name__ == "__main__":
     init_db()
     port = int(os.environ.get("PORT", "5000"))
     print(f"Studyflow rulează la http://127.0.0.1:{port}")
-    app.run(host="127.0.0.1", port=port, debug=True)
+    app.run(host="127.0.0.1", port=port, debug=False)
