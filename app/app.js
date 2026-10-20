@@ -105,15 +105,7 @@ $('#task-form').addEventListener('submit', event => {
 });
 $('#task-dialog').addEventListener('click', event => { if (event.target === event.currentTarget) event.currentTarget.close(); });
 $('#mobile-menu').addEventListener('click', () => $('#sidebar').classList.toggle('open'));
-$('#plan-button').addEventListener('click', () => {
-  const firstOpen = tasks.find(task => !task.done);
-  if (firstOpen) {
-    tasks = tasks.map(task => task.id === firstOpen.id ? { ...task, done: true } : task);
-    saveTasks(); renderTasks();
-    $('#plan-button').innerHTML = 'âœ“ Plan in motion';
-    setTimeout(() => { $('#plan-button').innerHTML = '<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg> Plan my day'; }, 1800);
-  } else setView('schedule');
-});
+$('#plan-button').addEventListener('click', () => setView('schedule'));
 $('#focus-range').addEventListener('click', event => {
   const weekly = event.currentTarget.dataset.range !== 'week';
   event.currentTarget.dataset.range = weekly ? 'week' : 'month';
